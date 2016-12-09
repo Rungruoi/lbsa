@@ -15,7 +15,7 @@ class LBSAProvider extends ServiceProvider
     public function boot()
     {
 		$this->publishes([
-	        __DIR__.'/views' => base_path('resources/views/libressltd/lbsa'),
+	        __DIR__.'/views' => base_path('resources/views/layouts'),
             __DIR__.'/public' => base_path('public'),
 	    ], "lbsa");
         Blade::directive('box_open', function ($title) {
