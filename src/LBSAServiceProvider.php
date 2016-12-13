@@ -5,7 +5,7 @@ namespace LIBRESSLtd\LBSA;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 
-class LBSAProvider extends ServiceProvider
+class LBSAServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
