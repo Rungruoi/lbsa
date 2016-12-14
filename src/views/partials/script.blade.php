@@ -75,6 +75,8 @@
 
 <!-- PAGE RELATED PLUGIN(S) -->
 
+@stack("js")
+
 
 <script type="text/javascript">
 // DO NOT REMOVE : GLOBAL FUNCTIONS!
