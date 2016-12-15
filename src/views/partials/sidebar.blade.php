@@ -19,9 +19,10 @@
 	<nav>
 		<ul>
 			@stack("sidebar")
-			@include("layouts.elements.sidebar_item_single", ["title" => "Test", "icon" => "fa-home", "url" => "/home", "id" => "sidebar_home"])
-			@include("layouts.elements.sidebar_item_single", ["title" => "Test", "icon" => "fa-home", "url" => "/home", "id" => "sidebar_home_1"])
-			@include("layouts.elements.sidebar_item_single", ["title" => "Test", "icon" => "fa-home", "url" => "/home", "id" => "sidebar_home_2"])
+			{-- @include("layouts.elements.sidebar_item_single", ["title" => "Test", "icon" => "fa-home", "url" => "/home", "id" => "sidebar_home"])
+			-- @include("layouts.elements.sidebar_item_single", ["title" => "Test", "icon" => "fa-home", "url" => "/home", "id" => "sidebar_home_1"])
+			-- @include("layouts.elements.sidebar_item_single", ["title" => "Test", "icon" => "fa-home", "url" => "/home", "id" => "sidebar_home_2"])
+			-- }
 		</ul>
 	</nav>
 	
