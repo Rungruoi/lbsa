@@ -14,10 +14,15 @@ class LBSAServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-		$this->publishes([
-	        __DIR__.'/views' => base_path('resources/views/layouts'),
+        $this->publishes([
+            __DIR__.'/views' => base_path('resources/views/layouts'),
             __DIR__.'/public' => base_path('public'),
-	    ], "lbsa");
+        ], "lbsa_update");
+        $this->publishes([
+            __DIR__.'/views' => base_path('resources/views/layouts'),
+            __DIR__.'/example' => base_path('resources/views/example'),
+            __DIR__.'/public' => base_path('public'),
+        ], "lbsa_init");
         Blade::directive('box_open', function ($title) {
             return "<div class=\"jarviswidget\" id=\"wid-id-1\" data-widget-colorbutton=\"false\" data-widget-editbutton=\"false\" data-widget-custombutton=\"false\">
                     <header>
