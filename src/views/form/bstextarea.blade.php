@@ -3,7 +3,7 @@
     @if ($errors->has($name))
 	<label class="textarea textarea-resizable state-error">
     else
-	<label class="textarea textarea-resizable state-error">
+	<label class="textarea textarea-resizable">
     @endif								
 		<textarea rows="3" class="custom-scroll" placeholder="{{ @$placeholder }}" name="{{ $name }}">{{ $value }}</textarea> 
 	</label>
