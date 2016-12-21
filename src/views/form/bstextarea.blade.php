@@ -1,6 +1,5 @@
 <section>
 	<label class="label">{{ $title }}</label>
-    @if ($errors->has($name))
 	<label class="textarea textarea-resizable 
     @if ($errors->has($name))
 	state-error
