@@ -1,10 +1,10 @@
 <section>
     <label class="label">{{ $title }}</label>
+    <label class="input 
     @if ($errors->has($name))
-	<label class="input state-error">
-    else
-	<label class="input state-error">
-    @endif
+	state-error
+	@endif
+	">
 	    
 	    <?php
 	    	$attrs = array('class' => 'form-control');

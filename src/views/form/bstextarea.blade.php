@@ -1,10 +1,11 @@
 <section>
 	<label class="label">{{ $title }}</label>
     @if ($errors->has($name))
-	<label class="textarea textarea-resizable state-error">
-    else
-	<label class="textarea textarea-resizable">
-    @endif								
+	<label class="textarea textarea-resizable 
+    @if ($errors->has($name))
+	state-error
+	@endif
+	">
 		<textarea rows="3" class="custom-scroll" placeholder="{{ @$placeholder }}" name="{{ $name }}">{{ $value }}</textarea> 
 	</label>
 	<!-- <div class="note">
