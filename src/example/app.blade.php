@@ -8,5 +8,5 @@
 @include("layouts.elements.sidebar_item_single", ["title" => "User", "icon" => "fa fa-user ", "url" => "/user", "id" => "sidebar_user"])
 @include("layouts.elements.sidebar_item_multi_open", ["title" => "User", "icon" => "fa fa-user ", "id" => "sidebar_user"])
 @include("layouts.elements.sidebar_item_single", ["title" => "User", "icon" => "fa fa-user ", "url" => "/user", "id" => "sidebar_user"])
-@include("layouts.elements.sidebar_item_close")
+@include("layouts.elements.sidebar_item_multi_close")
 @endpush
