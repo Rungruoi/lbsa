@@ -1,10 +1,29 @@
 <div class="form-group">
-    {{ Form::label($title, null, ['class' => 'control-label']) }}
-    @if ($value === -1)
-    <input class="form-control" type="date" name="{{ $name }}" value="" date-format="dd-MM-yyyy">
-    @elseif (isset($value))
-    <input class="form-control" type="date" name="{{ $name }}" value="{{ $value }}" date-format="dd-MM-yyyy">
-    @else
-    <input class="form-control" type="date" name="{{ $name }}" value="{{ date('Y-m-d') }}" date-format="dd-MM-yyyy">
+	@if (isset($title))
+	<label class="control-label">{{ $title }}</label>
+	@endif
+
+    <?php
+    	$attrs = array('class' => 'form-control datepicker', 'data-dateformat' => 'yy-mm-dd');
+		if (isset($place_holder))
+		{
+			$attrs['placeholder'] = $place_holder;
+		}
+		if (isset($validation))
+		{
+			$attrs = array_merge_recursive($attrs, $validation);
+		}
+    ?>
+    {{ Form::text($name, $value, $attrs) }}
+
+    @if (isset($hin))
+	    <div class="note">
+	        {{ $hin }}
+	    </div>
+    @endif
+    @if ($errors->has($name))
+    	@foreach ($errors->get($name) as $error)
+			<div class="note note-error">{{ $error }}</div>
+		@endforeach
     @endif
 </div>
