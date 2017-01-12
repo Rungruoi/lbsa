@@ -21,7 +21,7 @@
 	        {{ $hin }}
 	    </div>
     @endif
-    @if ($errors->has($name))
+    @if (isset($errors) && $errors->has($name))
     	@foreach ($errors->get($name) as $error)
 			<div class="note note-error">{{ $error }}</div>
 		@endforeach
