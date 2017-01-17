@@ -1,5 +1,5 @@
 <div class="form-group">
-	@if (isset($title))
+	@if (isset($title) && (strlen($title) > 0))
 	<label class="control-label">{{ $title }}</label>
 	@endif
 
@@ -16,7 +16,7 @@
     ?>
     {{ Form::text($name, $value, $attrs) }}
 
-    @if (isset($hin))
+    @if (isset($hin) && (strlen($hin) > 0))
 	    <div class="note">
 	        {{ $hin }}
 	    </div>
