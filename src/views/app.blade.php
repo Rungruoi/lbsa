@@ -4,14 +4,14 @@
     <head>
     @include("layouts.partials.htmlheader")
     </head>
-    <body class="">
+    <body class="@yield("body_classa")">
         @include("layouts.partials.mainheader")
         @include("layouts.partials.sidebar")
         <div id="main" role="main">
 
             <!-- RIBBON -->
             <div id="ribbon">
-            
+                @stack("ribbon")
             </div>
             <div id="content">
                 @yield("content")
