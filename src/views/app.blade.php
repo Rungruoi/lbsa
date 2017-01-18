@@ -4,7 +4,7 @@
     <head>
     @include("layouts.partials.htmlheader")
     </head>
-    <body class="@yield("body_classa")">
+    <body class="@yield("body_class")">
         @include("layouts.partials.mainheader")
         @include("layouts.partials.sidebar")
         <div id="main" role="main">
