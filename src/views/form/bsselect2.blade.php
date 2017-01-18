@@ -1,5 +1,5 @@
 <section>
-	@if (isset($title))
+	@if (isset($title) && strlen($title) > 0)
 	<label>{{ $title }}</label>
 	@endif
 	<select style="width:100%" class="select2" name="{{ $name }}">
