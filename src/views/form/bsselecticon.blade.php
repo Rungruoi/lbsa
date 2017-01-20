@@ -2,7 +2,7 @@
 	@if (isset($title))
 	<label class="control-label">{{ $title }}</label>
 	@endif
-    <input class="form-control icp icp-auto" value="fa-anchor" type="text" />
+    <input class="form-control icp icp-auto" value="{{ $value }}" type="text" />
 </div>
 
 @push("script")
