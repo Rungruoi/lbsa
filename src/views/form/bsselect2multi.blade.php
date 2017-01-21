@@ -7,7 +7,7 @@
     		<option value="{{ $item['value'] }}" 
 				@if (is_array($value))
 	    			@foreach ($value as $v)
-	    				@if ($v["value"] == $item["value"])
+	    				@if ($v == $item["value"])
 	    					selected
 	    				@endif
 	    			@endforeach
