@@ -26,5 +26,15 @@ php artisan vendor:publish --tag=lbform
 ### Step 4: Using:
 
 ```php
-{!! Form::lbText("text-input-name", "value in text input name", "Label of text input") !!}
+@include("layouts.elements.table", [
+    'url' => '/ajax/user',
+    'columns' => [
+        ['data' => 'name', 'title' => 'Name'],
+        ['data' => 'email', 'title' => 'Email'],
+        ['data' => 'account_balance', 'title' => 'Balance', "defaultContent" => 0],
+        ['data' => 'created_at', 'title' => 'Created at'],
+        ['data' => 'transaction_button', 'title' => 'Transaction'],
+        ['data' => 'transaction_button', 'title' => 'Transaction', 'hasFilter' => false],
+    ]
+])
 ```
