@@ -73,6 +73,13 @@
 <script src="{{ asset('/sa/js/smart-chat-ui/smart.chat.ui.min.js') }}"></script>
 <script src="{{ asset('/sa/js/smart-chat-ui/smart.chat.manager.min.js') }}"></script>
 
+<script src="{{ asset('/sa/js/plugin/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('/sa/js/plugin/datatables/dataTables.colVis.min.js') }}"></script>
+<script src="{{ asset('/sa/js/plugin/datatables/dataTables.tableTools.min.js') }}"></script>
+<script src="{{ asset('/sa/js/plugin/datatables/dataTables.bootstrap.min.js') }}"></script>
+<script src="{{ asset('/sa/js/plugin/datatable-responsive/datatables.responsive.min.js') }}"></script>
+
+
 <!-- PAGE RELATED PLUGIN(S) -->
 
 @stack("js")
