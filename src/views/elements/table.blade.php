@@ -5,11 +5,11 @@
     <thead>
 		<tr>
         	@foreach ($columns as $column)
-        		@if (!isset($column['hasFilter']) || $column['hasFilter'] == true)
-				<th class="hasinput" style="width:17%">
-					<input type="text" class="form-control" placeholder="{{ $column['title'] }}" />
+				<th class="hasinput">
+	        		@if (!isset($column['hasFilter']) || $column['hasFilter'] == true)
+						<input type="text" class="form-control" placeholder="{{ $column['title'] }}" />
+					@endif
 				</th>
-				@endif
         	@endforeach
 		</tr>
         <tr>
