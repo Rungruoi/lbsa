@@ -4,9 +4,11 @@
 <table id="{{ $special_id }}" class="table table-striped table-bordered" width="100%">
     <thead>
 		<tr>
-			<th class="hasinput" style="width:17%">
-				<input type="text" class="form-control" placeholder="Filter Name" />
-			</th>
+        	@foreach ($columns as $column)
+				<th class="hasinput" style="width:17%">
+					<input type="text" class="form-control" placeholder="{{ $column['title'] }}" />
+				</th>
+        	@endforeach
 		</tr>
         <tr>
         	@foreach ($columns as $column)
@@ -57,7 +59,8 @@ $(document).ready(function() {
 	        url: '{{ $url }}',
 	        type: '{{ $method or "GET"}}'
 	    },
-        columns: <?php echo json_encode($columns); ?>
+        columns: <?php echo json_encode($columns); ?>,
+        pageLength: {{ $pageLength or 50 }}
     });
     	   
     // Apply the filter
