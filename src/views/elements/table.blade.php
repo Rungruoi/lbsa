@@ -10,7 +10,7 @@
 		</tr>
         <tr>
         	@foreach ($columns as $column)
-        		<th>{{ $column->title }}</th>
+        		<th>{{ $column['title'] }}</th>
         	@endforeach
         </tr>
     </thead>
@@ -57,7 +57,7 @@ $(document).ready(function() {
 	        url: '{{ $url }}',
 	        type: '{{ $method or "GET"}}'
 	    },
-        columns: {!! $columns !!}
+        columns: <?php echo json_encode($columns); ?>
     });
     	   
     // Apply the filter
