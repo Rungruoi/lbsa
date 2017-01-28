@@ -90,7 +90,6 @@
 // DO NOT REMOVE : GLOBAL FUNCTIONS!
 $(document).ready(function() {
     pageSetUp();
-    CKEDITOR.replace( 'ckeditor', { height: '300px', startupFocus : true} );
 
 })
 
