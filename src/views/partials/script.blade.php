@@ -78,6 +78,7 @@
 <script src="{{ asset('/sa/js/plugin/datatables/dataTables.tableTools.min.js') }}"></script>
 <script src="{{ asset('/sa/js/plugin/datatables/dataTables.bootstrap.min.js') }}"></script>
 <script src="{{ asset('/sa/js/plugin/datatable-responsive/datatables.responsive.min.js') }}"></script>
+<script src="{{ asset('/sa/js/plugin/ckeditor/ckeditor.js') }}"></script>
 
 
 <!-- PAGE RELATED PLUGIN(S) -->
