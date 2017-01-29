@@ -22,15 +22,17 @@
     <tbody>
     </tbody>
     @if (isset($createForm))
-    {!! $createForm["open"] !!}
     <tfoot>
-    	@foreach ($createForm["fields"] as $field)
+		{!! $createForm["open"] !!}
     	<tr>
-    		{!! $field !!}
-    	</tr>
+    	@foreach ($createForm["fields"] as $field)
+	    	<td>
+	    		{!! $field !!}
+    		</td>
     	@endforeach
+    	</tr>
+    	{!! Form::close() !!}
     </tfoot>
-    {!! Form::close() !!}
     @endif
 </table>
 
