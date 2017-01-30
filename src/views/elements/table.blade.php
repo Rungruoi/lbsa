@@ -78,6 +78,7 @@ $(document).ready(function() {
 	        url: '{{ $url }}',
 	        type: '{{ $method or "GET"}}'
 	    },
+	    stateSave: true,
         columns: <?php echo json_encode($columns); ?>,
         pageLength: {{ $pageLength or 50 }}
     });
