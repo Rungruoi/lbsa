@@ -38,7 +38,6 @@
 
 
 @push('script')
-<script type="text/javascript" src="//editor.datatables.net/extensions/Editor/js/dataTables.editor.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 
@@ -49,13 +48,6 @@ $(document).ready(function() {
 		phone : 480
 	};
 
-	@if (isset($edit_url))
-	editor = new $.fn.dataTable.Editor( {
-        ajax: "{{ $edit_url }}",
-        table: "#{{ $special_id }}",
-    } );
-    @endif
- 
     // Activate an inline edit on click of a table cell
     $('#example').on( 'click', 'tbody td:not(:first-child)', function (e) {
         editor.inline( this );
