@@ -1,7 +1,7 @@
 <?php
 	$special_id = str_random(40);
 ?>
-<table id="{{ $special_id }}" class="table table-striped table-bordered" width="100%">
+<table id="{{ $special_id }}" class="table table-striped table-bordered" width="100%" style="overflow-x: auto;">
     <thead>
 		<tr>
         	@foreach ($columns as $column)
