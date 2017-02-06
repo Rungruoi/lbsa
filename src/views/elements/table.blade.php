@@ -82,6 +82,13 @@ $(document).ready(function() {
         columns: <?php echo json_encode($columns); ?>,
         pageLength: {{ $pageLength or 50 }}
     });
+	@if (isset($reloadTime))
+	
+	setInterval(function() {
+		t_{{ $special_id }}.fnReloadAjax();
+	}, {{ $reloadTime}} );
+
+	@endif
     	   
     // Apply the filter
     $("#{{ $special_id }} thead th input[type=text]").on( 'keyup change', function () {
