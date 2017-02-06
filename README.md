@@ -6,7 +6,7 @@ This is a form element pre-written with adminlte library of acacha.
 ### Step 1: install
 
 ```php
-composer require libressltd/lbform
+composer require libressltd/lbsa
 ```
 
 ### Step 2: add service provider
@@ -14,27 +14,18 @@ composer require libressltd/lbform
 In config/app.php, add following line to provider
 
 ```php
-LIBRESSLtd\LBForm\LBFormServiceProvider::class,
+LIBRESSLtd\LBSA\LBSAServiceProvider::class,
 ```
 
 ### Step 3: Publish 
 
 ```php
-php artisan vendor:publish --tag=lbform
+php artisan vendor:publish --tag=lbsa_init --force
 ```
 
-### Step 4: Using:
+### Step 4: Copy app.blade.php file to root folder of view, extend in any view
 
 ```php
-@include("layouts.elements.table", [
-    'url' => '/ajax/user',
-    'columns' => [
-        ['data' => 'name', 'title' => 'Name'],
-        ['data' => 'email', 'title' => 'Email'],
-        ['data' => 'account_balance', 'title' => 'Balance', "defaultContent" => 0],
-        ['data' => 'created_at', 'title' => 'Created at'],
-        ['data' => 'transaction_button', 'title' => 'Transaction'],
-        ['data' => 'transaction_button', 'title' => 'Transaction', 'hasFilter' => false],
-    ]
-])
+@extend("app")
+
 ```
