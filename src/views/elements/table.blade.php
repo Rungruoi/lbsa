@@ -39,6 +39,9 @@
 
 @push('script')
 <script type="text/javascript">
+
+var t_{{ $special_id }};
+
 $(document).ready(function() {
 
 	var responsiveHelper_datatable_fixed_column = undefined;
@@ -53,7 +56,7 @@ $(document).ready(function() {
         editor.inline( this );
     } );
 
-	var t_{{ $special_id }} = $('#{{ $special_id }}').DataTable({
+	t_{{ $special_id }} = $('#{{ $special_id }}').DataTable({
 		"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6 hidden-xs'f><'col-sm-6 col-xs-12 hidden-xs'<'toolbar'>>r>"+
 				"t"+
 				"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
@@ -85,7 +88,7 @@ $(document).ready(function() {
 	@if (isset($reloadTime))
 	
 	setInterval(function() {
-		t_{{ $special_id }}.fnReloadAjax();
+		t_{{ $special_id }}.ajax.reload();
 	}, {{ $reloadTime}} );
 
 	@endif
