@@ -38,6 +38,12 @@
 
 
 @push('script')
+<style type="text/css">
+	.autooverflow {
+		overflow-x: auto;
+		width: 100%;
+	}
+</style>
 <script type="text/javascript">
 
 var t_{{ $special_id }};
@@ -58,7 +64,7 @@ $(document).ready(function() {
 
 	t_{{ $special_id }} = $('#{{ $special_id }}').DataTable({
 		"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6 hidden-xs'f><'col-sm-6 col-xs-12 hidden-xs'<'toolbar'>>r>"+
-				"t"+
+				"<'autooverflow't>"+
 				"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
 		"autoWidth" : true,
 		"oLanguage": {
