@@ -1,4 +1,4 @@
-{!! Form::bsRatio($name, $value, array(
+{!! Form::lbRatio($name, $value, array(
 	array(
 		"name" => "Yes", 
 		"value" => 1
