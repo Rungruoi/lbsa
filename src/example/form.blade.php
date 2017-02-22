@@ -22,21 +22,19 @@ active
         <article class="col-lg-12">
             @box_open(trans("backend.user.list.title"))
                 <div>
-                    <div class="widget-body no-padding">
-                        @if (isset($bus))
-                        {!! Form::open(["url" => "/bus/$bus->id", "method" => "put"]) !!}
-                        @else
-                        {!! Form::open(["url" => "/bus", "method" => "post"]) !!}
-                        @endif
-                        <div class="widget-body">
-                            {!! Form::lbText("name_en", @$bus->name_en, "Name en") !!}
-                            {!! Form::lbText("name_vi", @$bus->name_vi, "Name vi") !!}
-                            <div class="widget-footer" style="text-align: left;">
-                                {!! Form::lbSubmit() !!}
-                            </div>
+                    @if (isset($bus))
+                    {!! Form::open(["url" => "/bus/$bus->id", "method" => "put"]) !!}
+                    @else
+                    {!! Form::open(["url" => "/bus", "method" => "post"]) !!}
+                    @endif
+                    <div class="widget-body">
+                        {!! Form::lbText("name_en", @$bus->name_en, "Name en") !!}
+                        {!! Form::lbText("name_vi", @$bus->name_vi, "Name vi") !!}
+                        <div class="widget-footer" style="text-align: left;">
+                            {!! Form::lbSubmit() !!}
                         </div>
-                        {!! Form::close() !!}
                     </div>
+                    {!! Form::close() !!}
                 </div>
             @box_close
         </article>
