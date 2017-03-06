@@ -1,8 +1,8 @@
 <div class="form-group">
 	@if (isset($title) && strlen($title) > 0)
-    {{ Form::label($title, null, ['class' => 'control-label']) }}
+    	{{ Form::label($name, $title, ['class' => 'control-label']) }}
     @endif
-	<select class="form-control  select2" name="{{ $name }}" multiple="multiple">
+	<select class="form-control select2" name="{{ $name }}" multiple="multiple">
     	@foreach ($items as $item)
     		<option value="{{ $item['value'] }}" 
 				@if (is_array($value))

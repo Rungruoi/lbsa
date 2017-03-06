@@ -1,6 +1,13 @@
 <div class="checkbox">
 	<label>
-		<input name="{{ $name }}" type="checkbox" value="1" {{ $value == 1 ? "checked" : ""}}>
+		<?php
+	    	$attrs = [];
+			if (isset($attribute))
+			{
+				$attrs = array_merge($attrs, $attribute);
+			}
+	    ?>
+		{{ Form::checkbox($name, 1, ($value == 1 ? true : false), $attrs) }}
 		{{ $title }}
 	</label>
 </div>

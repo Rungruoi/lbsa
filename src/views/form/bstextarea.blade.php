@@ -1,9 +1,5 @@
-<div class="form-group">
-	@if (isset($title))
-	<label class="control-label">{{ $title }}</label>
-	@endif
-
-    <?php
+<div class="form-group @if (isset($errors) && $errors->has($name)) has-error @endif">
+	<?php
     	$attrs = array('class' => 'form-control');
 		if (isset($placeholder))
 		{
@@ -11,10 +7,17 @@
 		}
 		if (isset($validation))
 		{
-			$attrs = array_merge_recursive($attrs, $validation);
+			$attrs = array_merge($attrs, $validation);
+		}
+		if (isset($attribute))
+		{
+			$attrs = array_merge($attrs, $attribute);
 		}
     ?>
-    {{ Form::textarea($name, $value, $attrs) }}
+    @if (isset($title))
+		{{ Form::label($name, $title, array('class' => 'control-label')) }}
+	@endif
+	{{ Form::textarea($name, $value, $attrs) }}
 
     @if (isset($hin))
 	    <div class="note">

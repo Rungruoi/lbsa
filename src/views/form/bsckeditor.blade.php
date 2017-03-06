@@ -1,5 +1,5 @@
 <div class="form-group">
-    {{ Form::label($title, null, ['class' => 'control-label']) }}
+    {{ Form::label($name, $title, ['class' => 'control-label']) }}
     <textarea class="ckeditor" id="editor1" rows="10" cols="80" name="{{ $name }}">
 		{{ @$value }}
 	</textarea>

@@ -11,7 +11,7 @@
 		}
 		if (isset($validation))
 		{
-			$attrs = array_merge_recursive($attrs, $validation);
+			$attrs = array_merge($attrs, $validation);
 		}
     ?>
     {{ Form::text($name, $value, $attrs) }}
