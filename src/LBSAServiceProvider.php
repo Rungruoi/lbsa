@@ -33,7 +33,7 @@ class LBSAServiceProvider extends ServiceProvider
         Blade::directive('box_close', function ($title) {
             return "</div>";
         });
-        Blade::directive('modal_open', function ($title, $id = "Default") {
+        Blade::directive('modal_open', function ($title, $id) {
             return "<div class=\"modal fade\" id=\"<?php echo $id; ?>\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
                         <div class=\"modal-dialog\">
                             <div class=\"modal-content\">
@@ -41,7 +41,7 @@ class LBSAServiceProvider extends ServiceProvider
                                     <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">
                                         &times;
                                     </button>
-                                    <h4 class=\"modal-title\" id=\"myModalLabel\"><?php echo $title; ?></h4>
+                                    <h4 class=\"modal-title\" id=\"myModalLabel\"><?php echo $title ?></h4>
                                 </div>";
         });
         Blade::directive('modal_close', function ($title) {
