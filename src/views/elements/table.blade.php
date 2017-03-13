@@ -72,13 +72,16 @@ $(document).ready(function() {
     } );
 
 	t_{{ $special_id }} = $('#{{ $special_id }}').DataTable({
-		"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6 hidden-xs'f><'col-sm-6 col-xs-12 hidden-xs'<'toolbar'>>r>"+
+				"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-6 hidden-xs'T>r>"+
 				"<'autooverflow't>"+
 				"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
 		"autoWidth" : true,
 		"oLanguage": {
 			"sSearch": '<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>'
 		},
+		"oTableTools": {
+            sSwfPath: "/sa/js/plugin/datatables/swf/copy_csv_xls_pdf.swf"
+        },
 		"preDrawCallback" : function() {
 			// Initialize the responsive datatables helper once.
 			if (!responsiveHelper_datatable_fixed_column) {
