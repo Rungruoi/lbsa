@@ -72,7 +72,7 @@ $(document).ready(function() {
     } );
 
 	t_{{ $special_id }} = $('#{{ $special_id }}').DataTable({
-				"sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-6 hidden-xs'T>r>"+
+				"sDom": "<'dt-toolbar'<'col-lg-12 hidden-xs'T>r>"+
 				"<'autooverflow't>"+
 				"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
 		"autoWidth" : true,
