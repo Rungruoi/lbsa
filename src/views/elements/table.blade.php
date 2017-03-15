@@ -84,10 +84,7 @@ $(document).ready(function() {
             aButtons: [
 	            'copy',
 	            'csv',
-				{ 
-					sExtends: "xls",
-					mColumns: 'visible',
-				},
+				'excelHtml5',
 				'pdf',
 				'print'
 			]
