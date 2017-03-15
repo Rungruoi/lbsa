@@ -23,8 +23,10 @@ class LBSAServiceProvider extends ServiceProvider
             __DIR__.'/example' => base_path('resources/views/example'),
             __DIR__.'/public' => base_path('public'),
         ], "lbsa_init");
+
         Blade::directive('box_open', function ($title) {
-            return "<div class=\"jarviswidget\" id=\"wid-id-1\" data-widget-sortable=\"false\" data-widget-colorbutton=\"false\" data-widget-editbutton=\"false\" data-widget-custombutton=\"false\">
+            $random = str_random(20);
+            return "<div class=\"jarviswidget\" id=\"$random\" data-widget-sortable=\"false\" data-widget-colorbutton=\"false\" data-widget-editbutton=\"false\" data-widget-custombutton=\"false\">
                     <header>
                         <span class=\"widget-icon\"> <i class=\"fa fa-edit\"></i> </span>
                         <h2><?php echo $title; ?></h2>
