@@ -80,7 +80,17 @@ $(document).ready(function() {
 			"sSearch": '<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>'
 		},
 		"oTableTools": {
-            sSwfPath: "/sa/js/plugin/datatables/swf/copy_csv_xls_pdf.swf"
+            sSwfPath: "/sa/js/plugin/datatables/swf/copy_csv_xls_pdf.swf",
+            aButtons: [
+	            'copy',
+	            'csv',
+				{ 
+					sExtends: "xls",
+					mColumns: 'visible',
+				},
+				'pdf',
+				'print'
+			]
         },
 		"preDrawCallback" : function() {
 			// Initialize the responsive datatables helper once.
