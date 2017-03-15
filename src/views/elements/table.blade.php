@@ -9,7 +9,7 @@
 		}
 	}
 ?>
-<table id="{{ $special_id }}" class="table table-striped table-bordered" width="100%" style="overflow-x: auto;">
+<table id="{{ $special_id }}" class="table table-striped table-bordered" width="100%" style="margin-top: 0px !important;">
     <thead>
 		<tr>
         	@foreach ($columns as $column)
@@ -51,6 +51,10 @@
 		overflow-x: auto;
 		width: 100%;
 	}
+	.align-right {
+		text-align: right;
+		margin-bottom: 5px;
+	}
 </style>
 
 <script type="text/javascript">
@@ -72,35 +76,16 @@ $(document).ready(function() {
     } );
 
 	t_{{ $special_id }} = $('#{{ $special_id }}').DataTable({
-				"sDom": "<'dt-toolbar'<'col-lg-12 hidden-xs'T>r>"+
+				"sDom": "<'dt-toolbar'<'col-lg-12 align-right'B>r>"+
 				"<'autooverflow't>"+
 				"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
 		"autoWidth" : true,
 		"oLanguage": {
 			"sSearch": '<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>'
 		},
-		"oTableTools": {
-            sSwfPath: "/sa/js/plugin/datatables/swf/copy_csv_xls_pdf.swf",
-            aButtons: [
-	            'copy',
-	            'csv',
-				'excelHtml5',
-				'pdf',
-				'print'
-			]
-        },
-		"preDrawCallback" : function() {
-			// Initialize the responsive datatables helper once.
-			if (!responsiveHelper_datatable_fixed_column) {
-				responsiveHelper_datatable_fixed_column = new ResponsiveDatatablesHelper($('#{{ $special_id }}'), breakpointDefinition);
-			}
-		},
-		"rowCallback" : function(nRow) {
-			responsiveHelper_datatable_fixed_column.createExpandIcon(nRow);
-		},
-		"drawCallback" : function(oSettings) {
-			responsiveHelper_datatable_fixed_column.respond();
-		},
+		buttons: [
+	        'copy', 'csv', 'excel', 'pdf'
+	    ],
 		@if (count($number_cols) > 0)
 		"columnDefs": [
             {

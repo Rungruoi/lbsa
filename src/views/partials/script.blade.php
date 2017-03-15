@@ -74,6 +74,7 @@
 <script src="{{ asset('/sa/js/smart-chat-ui/smart.chat.manager.min.js') }}"></script>
 
 <script src="{{ asset('/DataTables/datatables.js') }}"></script>
+<script src="{{ asset('/DataTables/Responsive-2.1.1/js/dataTables.responsive.js') }}"></script>
 <script src="{{ asset('/sa/js/plugin/ckeditor/ckeditor.js') }}"></script>
 
 
