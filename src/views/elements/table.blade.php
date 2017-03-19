@@ -76,7 +76,7 @@ $(document).ready(function() {
     } );
 
 	t_{{ $special_id }} = $('#{{ $special_id }}').DataTable({
-				"sDom": "<'dt-toolbar'<'col-lg-12 align-right'B>r>"+
+				"dom": "<'dt-toolbar'<'col-lg-12 align-right'B>r>"+
 				"<'autooverflow't>"+
 				"<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
 		"autoWidth" : true,
@@ -84,7 +84,7 @@ $(document).ready(function() {
 			"sSearch": '<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>'
 		},
 		buttons: [
-	        'copy', 'csv', 'excel', 'pdf'
+	        'copy', 'csv', 'excel', 'pdf', 'colvis'
 	    ],
 		@if (count($number_cols) > 0)
 		"columnDefs": [
